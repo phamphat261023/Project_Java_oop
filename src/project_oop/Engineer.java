@@ -1,8 +1,9 @@
 package project_oop;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Engineer extends Cadres implements SpecializedInterface {
+public class Engineer extends Cadres implements SpecializedInterface, Serializable {
     private String specialized;
 
     public Engineer (){

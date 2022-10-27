@@ -9,15 +9,19 @@ package project_oop;
  * *Y/C:
  * - Xây dựng các lớp ConhNhan, KySu, NhanVien kế thừa lớp CanBo
  * - Xây dựng lớp QLCanBo cài đặt các phương thức thực hiện các chức năng sau:
- * + Thêm mới cán bộ
- * + Tìm kếm theo họ tên
- * + Hiển thị thông tin danh sách cán bộ
+ * + Thêm mới nhân viên, kỹ sư, công nhân
+ * + Tìm kếm theo họ tên nhân vieen, kỹ sư, công nhân
+ * + Hiển thị thông tin danh sách nhân viên, kỹ sư, công nhân
+ * + Sắp xếp nhân viên tăng dần theo tên nhân viên, kỹ sư, công nhân
+ * + Xóa thông tin nhân viên theo mã nhân viên, kỹ sư, công nhân
+ * + Đọc, ghi file nhân viên, kỹ sư, công nhân
  * + Thoát khỏi trương trình
  * */
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Cadres {
+public class Cadres implements Serializable {
     private String name;
     private int age;
     private String gender;
@@ -70,10 +74,12 @@ public class Cadres {
         Scanner sc = new Scanner(System.in);
         System.out.println("Name: ");
         name = sc.nextLine();
-        System.out.println("Age: ");
-        age = sc.nextInt();
         System.out.println("Gender: ");
         gender = sc.nextLine();
+        System.out.println("Address: ");
+        address = sc.nextLine();
+        System.out.println("Age: ");
+        age = sc.nextInt();
     }
 
     @Override

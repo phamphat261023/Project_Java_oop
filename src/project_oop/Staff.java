@@ -1,10 +1,14 @@
 package project_oop;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Staff extends Cadres implements JobInterface {
+public class Staff extends Cadres implements JobInterface, Serializable {
     private String Id;
     private String job;
+
+    ArrayList<Staff> listStaff = new ArrayList<>();
 
     public Staff() {
         super();

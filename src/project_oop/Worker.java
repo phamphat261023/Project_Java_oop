@@ -1,8 +1,9 @@
 package project_oop;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Worker extends Cadres implements levelInterface {
+public class Worker extends Cadres implements levelInterface, Serializable {
     private int level;
 
     public Worker (){
